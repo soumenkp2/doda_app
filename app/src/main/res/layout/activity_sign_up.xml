@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name = "user_info"
+            type = "com.example.doda.User_info"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:layout_height="match_parent"
+        tools:context=".Screens.SignUp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Draw with DODA"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.651" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="142dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitXY"
+                android:padding="20dp"
+                android:src="@drawable/meeting"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:minHeight="650dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="4dp"
+                            android:padding="20dp"
+                            android:src="@drawable/meeting"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Draw with DODA"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="101dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Register your plan\nWith Drawing Rooms"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rectangular_outline_box"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="Tell us your Name"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@{user_info.name}"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+
+                    <EditText
+                        android:id="@+id/emailid"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/rectangular_outline_box"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="Email ID"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@{user_info.mail}"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rectangular_outline_box"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:hint="Password"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@{user_info.pass}"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/register_btn"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/blue_solid_circular"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Register"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/signin_btn"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/blue_solid_circular"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Sign In"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/sign_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Already a user? Sign in Now!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</layout>
